@@ -1,10 +1,16 @@
 {
   "name": "symfony-serializer",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Port of the Symfony component to node. It allows you to create normalizers and denormalizers to perform complex and recursive serialization and deserialization tasks.",
-  "main": "Serializer.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "istanbul cover --print both nodeunit ./test"
+    "test": "istanbul cover --print both nodeunit ./test",
+    "lint": "eslint .",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "precommit": "npm run lint",
+    "prepush": "npm test",
+    "postinstall": "park-sh set-version",
+    "commitmsg": "validate-commit-msg"
   },
   "keywords": [
     "serialization",
@@ -14,10 +20,30 @@
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/e0ipso/symfony-serializer.git"
+    "url": "https://github.com/e0ipso/symfony-serializer.git"
   },
   "bugs": {
     "url": "https://github.com/e0ipso/symfony-serializer/issues"
   },
-  "homepage": "https://github.com/e0ipso/symfony-serializer#readme"
+  "homepage": "https://github.com/e0ipso/symfony-serializer#readme",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "husky": "^0.14.3",
+    "istanbul": "^0.4.5",
+    "nodeunit": "^0.11.1",
+    "semantic-release": "^6.3.6",
+    "semantic-release-conventional-commits": "^1.0.2",
+    "sinon": "^2.4.0",
+    "validate-commit-msg": "^2.13.1"
+  },
+  "release": {
+    "analyzeCommits": "semantic-release-conventional-commits",
+    "branch": "master",
+    "getLastRelease": "last-release-git"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }

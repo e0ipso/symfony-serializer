@@ -1,5 +1,3 @@
-'use strict';
-
 const _ = require('lodash');
 const EventEmitter = require('events');
 const JsonEncode = require('./encoder/JsonEncode');
@@ -13,7 +11,6 @@ const util = require('util');
  * it can find the appropriate (de)normalizer to use in every moment.
  */
 class Serializer extends EventEmitter {
-
   /**
    * Construct the serializer object.
    *
@@ -342,7 +339,6 @@ class Serializer extends EventEmitter {
   supportsDecoding(format) {
     return this.decoder.supportsDecoding(format);
   }
-
 }
 
 module.exports = Serializer;

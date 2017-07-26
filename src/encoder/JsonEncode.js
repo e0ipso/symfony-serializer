@@ -1,10 +1,7 @@
-'use strict';
-
 /**
  * Encoder class for the json format. This turns any object into a JSON string.
  */
 class JsonEncode {
-
   /**
    * Constructs a JsonEncode object.
    */
@@ -49,7 +46,6 @@ class JsonEncode {
   needsNormalization(format) { // eslint-disable-line no-unused-vars
     return true;
   }
-
 }
 
 module.exports = JsonEncode;

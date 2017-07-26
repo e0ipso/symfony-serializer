@@ -1,10 +1,7 @@
-'use strict';
-
 /**
  * Decoder class for the json format. This parses a JSON string into an object.
  */
 class JsonDecode {
-
   /**
    * Constructs a JsonDecode object.
    */
@@ -37,7 +34,6 @@ class JsonDecode {
   supportsDecoding(format) {
     return format.indexOf(this.format) !== -1;
   }
-
 }
 
 module.exports = JsonDecode;

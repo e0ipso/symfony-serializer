@@ -1,5 +1,3 @@
-'use strict';
-
 const EventEmitter = require('events');
 
 /**
@@ -11,7 +9,6 @@ const EventEmitter = require('events');
  * serialization process.
  */
 class Normalizer extends EventEmitter {
-
   /**
    * Normalizes an object into a set of arrays, plain objects and scalars.
    *
@@ -90,7 +87,6 @@ class Normalizer extends EventEmitter {
   static _methodNotImplented() {
     throw new Error('This method is not implemented.');
   }
-
 }
 
 module.exports = Normalizer;
