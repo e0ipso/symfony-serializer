@@ -1,0 +1,23 @@
+{
+  "name": "symfony-serializer",
+  "version": "1.0.0",
+  "description": "Port of the Symfony component to node. It allows you to create normalizers and denormalizers to perform complex and recursive serialization and deserialization tasks.",
+  "main": "Serializer.js",
+  "scripts": {
+    "test": "istanbul cover --print both nodeunit ./test"
+  },
+  "keywords": [
+    "serialization",
+    "symfony"
+  ],
+  "author": "Mateu Aguiló Bosch <mateu.aguilo.bosch@gmail.com> (e0ipso)",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e0ipso/symfony-serializer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e0ipso/symfony-serializer/issues"
+  },
+  "homepage": "https://github.com/e0ipso/symfony-serializer#readme"
+}
