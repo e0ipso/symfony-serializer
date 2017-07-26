@@ -5,11 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "test": "istanbul cover --print both nodeunit ./test",
+    "coverage": "istanbul check-coverage --statements 100 --lines 100 --branches 100 --functions 100 **/coverage.json",
     "lint": "eslint .",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run lint",
-    "prepush": "npm test",
-    "postinstall": "park-sh set-version",
+    "prepush": "npm test && npm run coverage",
     "commitmsg": "validate-commit-msg"
   },
   "keywords": [
