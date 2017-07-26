@@ -1,6 +1,6 @@
 {
   "name": "symfony-serializer",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "Port of the Symfony component to node. It allows you to create normalizers and denormalizers to perform complex and recursive serialization and deserialization tasks.",
   "main": "src/index.js",
   "scripts": {
