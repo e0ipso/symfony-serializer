@@ -40,9 +40,7 @@
     "validate-commit-msg": "^2.13.1"
   },
   "release": {
-    "analyzeCommits": "semantic-release-conventional-commits",
-    "branch": "master",
-    "getLastRelease": "last-release-git"
+    "analyzeCommits": "semantic-release-conventional-commits"
   },
   "dependencies": {
     "lodash": "^4.17.4"
