@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "istanbul cover --print both nodeunit ./test",
-    "coverage": "istanbul check-coverage --statements 85 --lines 85 --branches 85 --functions 85 **/coverage.json",
+    "coverage": "istanbul check-coverage --statements 50 --lines 50 --branches 30 --functions 65 **/coverage.json",
     "lint": "eslint .",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run lint",
@@ -43,6 +43,7 @@
     "analyzeCommits": "semantic-release-conventional-commits"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "xml2js": "^0.4.18"
   }
 }

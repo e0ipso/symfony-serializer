@@ -2,6 +2,10 @@ const _ = require('lodash');
 const EventEmitter = require('events');
 const JsonEncode = require('./encoder/JsonEncode');
 const JsonDecode = require('./encoder/JsonDecode');
+const XmlEncode = require('./encoder/XmlEncode');
+const XmlDecode = require('./encoder/XmlDecode');
+const ChainEncoder = require('./encoder/ChainEncoder');
+const ChainDecoder = require('./encoder/ChainDecoder');
 const util = require('util');
 
 /**
@@ -30,9 +34,8 @@ class Serializer extends EventEmitter {
       });
     this.normalizers = normalizers;
 
-    // At the moment we only support JSON encoding.
-    this.encoder = new JsonEncode();
-    this.decoder = new JsonDecode();
+    this.encoder = new ChainEncoder([new JsonEncode(), new XmlEncode()]);
+    this.decoder = new ChainDecoder([new JsonDecode(), new XmlDecode()]);
   }
 
   /**
