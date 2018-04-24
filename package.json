@@ -43,7 +43,7 @@
     "analyzeCommits": "semantic-release-conventional-commits"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.9",
     "xml2js": "^0.4.18"
   }
 }
