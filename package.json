@@ -10,7 +10,9 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run lint",
     "prepush": "npm test && npm run coverage",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "serialization",
@@ -44,6 +46,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "xml2js": "^0.4.18"
-  }
+    "xml2js": "^0.4.18",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
